@@ -1,6 +1,7 @@
 {
-	"name": "SnowflakeTable1",
+	"name": "dsSnowflakeSource",
 	"properties": {
+		"description": "dsSnowflakeSource",
 		"linkedServiceName": {
 			"referenceName": "Snowflake1",
 			"type": "LinkedServiceReference"
