@@ -25,20 +25,10 @@
 					},
 					"sink": {
 						"type": "AzureSqlSink",
-						"writeBatchSize": 10000,
-						"maxConcurrentConnections": 1,
 						"tableOption": "autoCreate",
 						"disableMetricsCollection": false
 					},
-					"enableStaging": true,
-					"stagingSettings": {
-						"linkedServiceName": {
-							"referenceName": "AzureBlobStorage1",
-							"type": "LinkedServiceReference"
-						},
-						"path": "output",
-						"enableCompression": false
-					},
+					"enableStaging": false,
 					"parallelCopies": 1,
 					"enableSkipIncompatibleRow": true,
 					"logSettings": {
