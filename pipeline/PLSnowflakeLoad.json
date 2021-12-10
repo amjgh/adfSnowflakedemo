@@ -4,7 +4,7 @@
 		"description": "PLSnowflakeLoad",
 		"activities": [
 			{
-				"name": "CopySnowflakeToSQLServer",
+				"name": "CopySnowflakeToSQLServer_copy1",
 				"description": "CopySnowflakeToSQLServer",
 				"type": "Copy",
 				"dependsOn": [],
@@ -26,7 +26,88 @@
 					"sink": {
 						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"parallelCopies": 1,
+					"enableSkipIncompatibleRow": false,
+					"logSettings": {
+						"enableCopyActivityLog": true,
+						"copyActivityLogSettings": {
+							"logLevel": "Warning",
+							"enableReliableLogging": true
+						},
+						"logLocationSettings": {
+							"linkedServiceName": {
+								"referenceName": "AzureBlobStorage1",
+								"type": "LinkedServiceReference"
+							},
+							"path": "output"
+						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "SM_SHIP_MODE_SK",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "SM_SHIP_MODE_SK",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SM_SHIP_MODE_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SM_SHIP_MODE_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SM_TYPE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SM_TYPE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SM_CODE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SM_CODE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SM_CARRIER",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SM_CARRIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SM_CONTRACT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SM_CONTRACT",
+									"type": "String"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
