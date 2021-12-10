@@ -1,0 +1,41 @@
+{
+	"name": "dsSQLDestination",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "SM_SHIP_MODE_SK",
+				"type": "varchar"
+			},
+			{
+				"name": "SM_SHIP_MODE_ID",
+				"type": "varchar"
+			},
+			{
+				"name": "SM_TYPE",
+				"type": "varchar"
+			},
+			{
+				"name": "SM_CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "SM_CARRIER",
+				"type": "varchar"
+			},
+			{
+				"name": "SM_CONTRACT",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ship_mode"
+		}
+	}
+}

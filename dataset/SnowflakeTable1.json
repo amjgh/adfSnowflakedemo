@@ -1,0 +1,53 @@
+{
+	"name": "SnowflakeTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [
+			{
+				"name": "SM_SHIP_MODE_SK",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "SM_SHIP_MODE_ID",
+				"type": "VARCHAR",
+				"precision": 16,
+				"scale": 0
+			},
+			{
+				"name": "SM_TYPE",
+				"type": "VARCHAR",
+				"precision": 30,
+				"scale": 0
+			},
+			{
+				"name": "SM_CODE",
+				"type": "VARCHAR",
+				"precision": 10,
+				"scale": 0
+			},
+			{
+				"name": "SM_CARRIER",
+				"type": "VARCHAR",
+				"precision": 20,
+				"scale": 0
+			},
+			{
+				"name": "SM_CONTRACT",
+				"type": "VARCHAR",
+				"precision": 20,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "TPCDS_SF10TCL",
+			"table": "SHIP_MODE"
+		}
+	}
+}

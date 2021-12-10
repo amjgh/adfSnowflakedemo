@@ -1,17 +1,7 @@
 {
-	"name": "pipeline1",
+	"name": "PLSnowflakeLoad",
 	"properties": {
-		"activities": [
-			{
-				"name": "Wait1",
-				"type": "Wait",
-				"dependsOn": [],
-				"userProperties": [],
-				"typeProperties": {
-					"waitTimeInSeconds": 1
-				}
-			}
-		],
+		"description": "PLSnowflakeLoad",
 		"annotations": []
 	}
 }
