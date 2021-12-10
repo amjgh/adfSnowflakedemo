@@ -27,6 +27,7 @@
 						"type": "AzureSqlSink",
 						"writeBatchSize": 10000,
 						"maxConcurrentConnections": 1,
+						"tableOption": "autoCreate",
 						"disableMetricsCollection": false
 					},
 					"enableStaging": true,
@@ -39,7 +40,7 @@
 						"enableCompression": false
 					},
 					"parallelCopies": 1,
-					"enableSkipIncompatibleRow": false,
+					"enableSkipIncompatibleRow": true,
 					"logSettings": {
 						"enableCopyActivityLog": true,
 						"copyActivityLogSettings": {
