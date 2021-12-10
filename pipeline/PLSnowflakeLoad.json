@@ -24,7 +24,10 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"writeBatchSize": 10000,
+						"maxConcurrentConnections": 1,
+						"disableMetricsCollection": false
 					},
 					"enableStaging": true,
 					"stagingSettings": {
