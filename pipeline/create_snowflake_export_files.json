@@ -70,7 +70,8 @@
 								"sink": {
 									"type": "DelimitedTextSink",
 									"storeSettings": {
-										"type": "AzureBlobStorageWriteSettings"
+										"type": "AzureBlobStorageWriteSettings",
+										"maxConcurrentConnections": 1
 									},
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
@@ -101,7 +102,7 @@
 									"referenceName": "csv_export_file",
 									"type": "DatasetReference",
 									"parameters": {
-										"file_name": "ABC.csv"
+										"file_name": "ABC.txt"
 									}
 								}
 							]
