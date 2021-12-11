@@ -102,7 +102,7 @@
 									"referenceName": "csv_export_file",
 									"type": "DatasetReference",
 									"parameters": {
-										"file_name": "ABC.CSV"
+										"file_name": "abc.csv"
 									}
 								}
 							]
