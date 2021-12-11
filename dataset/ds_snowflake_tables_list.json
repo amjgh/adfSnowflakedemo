@@ -1,0 +1,12 @@
+{
+	"name": "ds_snowflake_tables_list",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "snowflake_export",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": []
+	}
+}
