@@ -102,7 +102,10 @@
 									"referenceName": "csv_export_file",
 									"type": "DatasetReference",
 									"parameters": {
-										"file_name": "abc.csv"
+										"file_name": {
+											"value": "@concat(item().TABLE_SCHEMA,'_',item().TABLE_NAME,'.CSV')",
+											"type": "Expression"
+										}
 									}
 								}
 							]
