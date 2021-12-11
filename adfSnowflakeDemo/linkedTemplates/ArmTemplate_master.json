@@ -7,9 +7,17 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfSnowflakeDemo"
 		},
-		"AzureBlobStorage1_connectionString": {
+		"AzureBlobStorage1_sasUri": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+			"metadata": "Secure string for 'sasUri' of 'AzureBlobStorage1'"
+		},
+		"myKeyVault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://kv-aj-key-valult.vault.azure.net/"
+		},
+		"snowflake_export_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'snowflake_export'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -38,8 +46,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureBlobStorage1_connectionString": {
-						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					"AzureBlobStorage1_sasUri": {
+						"value": "[parameters('AzureBlobStorage1_sasUri')]"
+					},
+					"myKeyVault_properties_typeProperties_baseUrl": {
+						"value": "[parameters('myKeyVault_properties_typeProperties_baseUrl')]"
+					},
+					"snowflake_export_connectionString": {
+						"value": "[parameters('snowflake_export_connectionString')]"
 					}
 				}
 			},

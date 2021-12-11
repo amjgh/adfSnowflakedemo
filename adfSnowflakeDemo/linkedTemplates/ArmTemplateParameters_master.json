@@ -5,7 +5,13 @@
 		"factoryName": {
 			"value": "adfSnowflakeDemo"
 		},
-		"AzureBlobStorage1_connectionString": {
+		"AzureBlobStorage1_sasUri": {
+			"value": ""
+		},
+		"myKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://kv-aj-key-valult.vault.azure.net/"
+		},
+		"snowflake_export_connectionString": {
 			"value": ""
 		},
 		"containerUri": {
