@@ -1,0 +1,30 @@
+{
+	"name": "ds_snowflake_current_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "snowflake_export",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Table_Name": {
+				"type": "string"
+			},
+			"Table_Schema": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().Table_Schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().Table_Name",
+				"type": "Expression"
+			}
+		}
+	}
+}
